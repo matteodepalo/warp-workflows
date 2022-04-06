@@ -1,0 +1,10 @@
+name: Rebase onto
+command: git rebase --onto {{branch_name}} {{commit}}
+description: Rebase the commit reachable from HEAD whose parent is {{commit}} on top of {{branch_name}}
+tags:
+  - git
+arguments:
+  - name: branch_name
+    description: The branch to rebase onto
+  - name: commit
+    description: The parent of the commit you want to rebase from (this commit will be excluded from the rebase)
